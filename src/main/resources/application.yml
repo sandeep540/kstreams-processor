@@ -1,0 +1,10 @@
+spring.cloud.stream:
+  function:
+    definition: tempProcessor
+  bindings:
+    tempProcessor-in-0:
+      destination: input-topic
+    tempProcessor-out-0:
+      destination: enriched-topic
+  kafka.streams.binder:
+    brokers: localhost:52609
